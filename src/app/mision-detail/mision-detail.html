@@ -1,0 +1,69 @@
+<!-- Componente de cabecera reutilizable -->
+<app-header></app-header>
+
+<!-- Contenedor principal con margen superior -->
+<div class="container mt-5">
+
+  <!-- Condicional Angular: si existe la misión, se muestra su detalle -->
+  @if (mision) {
+
+    <!-- Tarjeta principal con sombra y sin borde -->
+    <div class="card shadow-lg border-0">
+
+      <!-- Encabezado de la tarjeta con fondo azul y texto blanco centrado -->
+      <div class="card-header bg-primary text-white text-center">
+        <h2 class="mb-0">{{ mision.nombre }}</h2> <!-- Nombre de la misión -->
+      </div>
+
+      <!-- Cuerpo de la tarjeta -->
+      <div class="card-body">
+
+        <!-- Imagen de la misión centrada y estilizada -->
+        <div class="text-center mb-4">
+          <img
+            [src]="getImagen(mision.id)"
+            class="img-fluid rounded shadow"
+            style="max-width: 500px; height: auto;"
+            alt="Imagen de {{ mision.nombre }}"
+          />
+        </div>
+
+        <!-- Datos clave de la misión en una columna -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <p><strong>📅 Año:</strong> {{ mision.anio }}</p>       <!-- Año de lanzamiento -->
+            <p><strong>🌍 Destino:</strong> {{ mision.destino }}</p> <!-- Destino espacial -->
+            <p><strong>🚀 Agencia:</strong> {{ mision.agencia }}</p> <!-- Agencia responsable -->
+          </div>
+        </div>
+
+        <!-- Sección de descripción -->
+        <div class="mb-4">
+          <h5 class="text-secondary">📝 Descripción</h5>
+          <p class="text-muted">{{ mision.descripcion }}</p> <!-- Texto explicativo -->
+        </div>
+
+        <!-- Espacio reservado para acciones futuras (botones, enlaces, etc.) -->
+        <div class="text-end">
+        </div>
+
+      </div> <!-- Fin del cuerpo de la tarjeta -->
+    </div> <!-- Fin de la tarjeta -->
+
+  } @else {
+
+    <!-- Mensaje de error si no se encuentra la misión -->
+    <div class="text-center text-danger mt-5">
+      <p>❌ Misión no encontrada.</p>
+      <button class="btn btn-outline-secondary" routerLink='/'>
+        Volver al inicio
+      </button>
+    </div>
+
+  }
+
+</div> <!-- Fin del contenedor principal -->
+
+<!-- Componente de pie de página reutilizable -->
+<app-footer></app-footer>
+

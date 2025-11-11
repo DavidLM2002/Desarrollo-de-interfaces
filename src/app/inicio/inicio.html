@@ -1,0 +1,88 @@
+<!-- Componente de cabecera -->
+<app-header></app-header>
+
+<!-- Contenedor principal con margen superior -->
+<div class="container mt-5">
+
+  <!-- Título centrado con color primario -->
+  <h2 class="text-center text-primary mb-4">Misiones Espaciales Destacadas</h2>
+
+  <!-- Carrusel Bootstrap con sombra y bordes redondeados -->
+  <div id="carruselMisiones" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+
+    <!-- Contenedor de las diapositivas del carrusel -->
+    <div class="carousel-inner text-center">
+
+      <!-- ===================== Slide 1: Apollo 11 ===================== -->
+      <div class="carousel-item active"> <!-- Primera diapositiva activa por defecto -->
+        <img
+          src="https://www.heraldnet.com/wp-content/uploads/2019/07/17605697_web1_L2-apollo11-edh-190708.jpg"
+          class="img-fluid rounded mx-auto d-block"
+          style="max-height: 400px; object-fit: cover;"
+          alt="Apollo 11"
+        />
+        <!-- Texto superpuesto con fondo oscuro semitransparente -->
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+          <h5>Apollo 11</h5>
+          <p>La primera misión tripulada que aterrizó en la Luna en 1969.</p>
+        </div>
+      </div>
+
+      <!-- ===================== Slide 2: Voyager 1 ===================== -->
+      <div class="carousel-item">
+        <img
+          src="https://qz.com/cdn-cgi/image/width=1920,quality=85,format=auto/https://assets.qz.com/media/8fac5cac28ee1a5916f068dc15e6cf08.jpg"
+          class="img-fluid rounded mx-auto d-block"
+          style="max-height: 400px; object-fit: cover;"
+          alt="Voyager 1"
+        />
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+          <h5>Voyager 1</h5>
+          <p>Explorando los límites del sistema solar desde 1977.</p>
+        </div>
+      </div>
+
+      <!-- ===================== Slide 3: Curiosity ===================== -->
+      <div class="carousel-item">
+        <img
+          src="https://cdn.britannica.com/17/132317-050-8328935B/Artist-conception-Mars-Science-Laboratory.jpg"
+          class="img-fluid rounded mx-auto d-block"
+          style="max-height: 400px; object-fit: cover;"
+          alt="Curiosity"
+        />
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+          <h5>Curiosity</h5>
+          <p>Rover de la NASA que estudia Marte desde 2012.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== Controles de navegación ===================== -->
+
+    <!-- Botón para ir a la diapositiva anterior -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselMisiones" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+
+    <!-- Botón para ir a la siguiente diapositiva -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselMisiones" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+
+    <!-- ===================== Indicadores de posición ===================== -->
+    <div class="carousel-indicators">
+      <!-- Botón para la primera diapositiva -->
+      <button type="button" data-bs-target="#carruselMisiones" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <!-- Botón para la segunda diapositiva -->
+      <button type="button" data-bs-target="#carruselMisiones" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <!-- Botón para la tercera diapositiva -->
+      <button type="button" data-bs-target="#carruselMisiones" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Componente de pie de página -->
+<app-footer></app-footer>
+

@@ -1,0 +1,68 @@
+<!-- Componente de cabecera -->
+<app-header></app-header>
+
+<!-- Contenedor principal con margen superior -->
+<div class="container mt-5">
+  <!-- Título principal centrado y estilizado -->
+  <h1 class="text-center text-primary mb-4">Información General</h1>
+
+  <!-- Sección: Propósito del proyecto -->
+  <div class="card mb-4 shadow-sm border-0"> <!-- Tarjeta sin borde con sombra -->
+    <div class="card-body">
+      <h4 class="card-title text-success">Propósito del Proyecto</h4>
+      <p class="card-text text-muted">
+        Este sitio web está diseñado para ofrecer una experiencia educativa y visualmente atractiva sobre misiones espaciales. El objetivo es acercar la exploración espacial a estudiantes, curiosos y apasionados del cosmos.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección: Contenido del sitio -->
+  <div class="card mb-4 shadow-sm border-0">
+    <div class="card-body">
+      <h4 class="card-title text-info">¿Qué encontrarás aquí?</h4>
+      <ul class="list-group list-group-flush"> <!-- Lista sin bordes exteriores -->
+        <li class="list-group-item">Listado de misiones espaciales con imágenes y detalles</li>
+        <li class="list-group-item">Información sobre agencias como NASA, ESA y SpaceX</li>
+        <li class="list-group-item">Destinos como la Luna, Marte y más allá</li>
+        <li class="list-group-item">Fechas clave, logros y curiosidades</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sección: Tecnologías utilizadas -->
+  <div class="card mb-4 shadow-sm border-0">
+    <div class="card-body">
+      <h4 class="card-title text-warning">Tecnologías utilizadas</h4>
+      <p class="card-text text-muted">
+        Este proyecto está desarrollado con Angular como framework principal, Bootstrap para el diseño responsive, y TypeScript para una estructura robusta. Las imágenes se gestionan mediante rutas locales o base64, y la navegación es completamente SPA.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección: Beneficios para el usuario -->
+  <div class="card mb-4 shadow-sm border-0">
+    <div class="card-body">
+      <h4 class="card-title text-danger">Beneficios para el usuario</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Interfaz clara y moderna</li>
+        <li class="list-group-item">Acceso rápido a información relevante</li>
+        <li class="list-group-item">Navegación fluida sin recargas</li>
+        <li class="list-group-item">Contenido visualmente atractivo</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Botón para navegar a la sección del equipo -->
+<div class="text-center mt-4">
+  <button class="btn btn-outline-success btn-lg" routerLink="/info/equipo">
+    Conoce al equipo
+  </button>
+</div>
+
+<!-- Punto de inserción para rutas hijas -->
+<router-outlet></router-outlet>
+
+<!-- Componente de pie de página -->
+<app-footer></app-footer>
+

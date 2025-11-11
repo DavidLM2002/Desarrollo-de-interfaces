@@ -1,0 +1,57 @@
+<!-- Componente de cabecera reutilizable -->
+<app-header></app-header>
+
+<!-- Contenedor principal con margen superior -->
+<div class="container mt-4">
+
+  <!-- Título centrado con margen inferior -->
+  <h2 class="text-center mb-4">Misiones Espaciales</h2>
+
+  <!-- Fila Bootstrap con columnas responsivas y espacio entre ellas -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4">
+
+    <!-- Iteración sobre el array de misiones usando control flow de Angular v17 -->
+    @for (mision of misiones; track mision.id) {
+
+      <!-- Columna individual para cada tarjeta -->
+      <div class="col">
+
+        <!-- Tarjeta con altura completa, borde gris y sombra ligera -->
+        <div class="card h-100 border border-secondary shadow-sm">
+
+          <!-- Imagen superior de la tarjeta, obtenida dinámicamente -->
+          <img
+            [src]="getImagen(mision.id)"
+            class="card-img-top"
+            alt="Imagen de {{ mision.nombre }}"
+          />
+
+          <!-- Cuerpo de la tarjeta con contenido centrado -->
+          <div class="card-body text-center">
+
+            <!-- Destino de la misión en azul -->
+            <h5 class="card-title text-primary">{{ mision.destino }}</h5>
+
+            <!-- Nombre y agencia con año, estilizado -->
+            <p class="card-text">
+              <strong>{{ mision.nombre }}</strong><br />
+              <span class="text-muted">{{ mision.agencia }} - {{ mision.anio }}</span>
+            </p>
+
+            <!-- Botón para ver más detalles, con navegación dinámica -->
+            <a [routerLink]="['/misiones', mision.id]" class="btn btn-outline-primary mt-2">
+              Ver más
+            </a>
+
+          </div> <!-- Fin del cuerpo de la tarjeta -->
+        </div> <!-- Fin de la tarjeta -->
+      </div> <!-- Fin de la columna -->
+    } <!-- Fin del bucle -->
+  </div> <!-- Fin de la fila -->
+</div> <!-- Fin del contenedor -->
+
+<!-- Componente de pie de página reutilizable -->
+<app-footer></app-footer>
+
+
+

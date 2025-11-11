@@ -1,0 +1,50 @@
+<!-- Barra de navegación principal con fondo oscuro y padding vertical -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+  <div class="container-fluid"> <!-- Contenedor fluido para ocupar todo el ancho -->
+
+    <!-- Logo del sitio con tamaño de fuente grande y navegación al inicio -->
+    <a class="navbar-brand fs-4" routerLink="/">Mision Espacial</a>
+
+    <!-- Botón hamburguesa visible en pantallas pequeñas para mostrar/ocultar el menú -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span> <!-- Ícono hamburguesa -->
+    </button>
+
+    <!-- Contenedor colapsable del contenido de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Alineación a la derecha y espaciado entre elementos -->
+      <div class="ms-auto d-flex align-items-center gap-3">
+
+        <!-- Botones de navegación con estilos diferenciados -->
+        <button class="btn btn-outline-light px-4 py-2 fw-bold" routerLink="/">Inicio</button>
+        <button class="btn btn-outline-info px-4 py-2 fw-bold" routerLink="/info">Info</button>
+        <button class="btn btn-outline-success px-4 py-2 fw-bold" routerLink="/misiones">Misiones</button>
+
+        <!-- Buscador con estilo ancho y accesible -->
+        <form class="d-flex" role="search">
+          <input
+            type="search"
+            class="form-control form-control-lg"
+            placeholder="🔍 Buscar misión..."
+            aria-label="Buscar"
+            style="min-width: 250px;"
+          />
+        </form>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
